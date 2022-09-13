@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+         <record model="ir.ui.view" id="custom_branches_inherit_view">
+            <field name="name">custom.branches.inherit</field>
+            <field name="model">custom.branches</field>
+               <field name="inherit_id" ref="custom_branch_13.custom_branches_view" />
+                <field name="arch" type="xml">
+                        <xpath expr="//form/sheet/group" position="inside">
+
+                                <group>
+                                     <field name="branch_name"/>
+                                     <field name="bank_account_id"/>
+                                     <field name="building_no"/>
+                                     <field name="District"/>
+                                     <field name="additional_no"/>
+                                     <field name="street"/>
+                                     <field name="city"/>
+
+                                     <field name="country_id"/>
+                                     <field name="zip"/>
+                                     <field name="company_registry"/>
+                                     <field name="unit_no"/>
+                                    <field name="company_info_breif_in_report" widget="radio"/>
+                                    <field name="branch_signture" widget="image" class="oe_avatar" nolabel="1" options="{'image_preview': 'image_128'}"/>
+                                </group>
+
+
+                     </xpath>
+              </field>
+         </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="branch_allowed_server_action" model="ir.actions.server">
+            <field name="name">show branches user allowed</field>
+            <field name="model_id" ref="model_res_company"/>
+            <field name="state">code</field>
+            <field name="code">
+                action = model.get_allowed_user_branch()
+            </field>
+        </record>
+
+        <menuitem id="res_sa_setup_menu"
+                    name="اعدادات الكيان القانوني"
+                    parent="account.menu_finance"
+                    sequence="100"/>
+        <menuitem id="allowed_user_branch_action_menu"  name="الفروع"
+                 groups="custom_branch_13_inherited.group_access_branch_data"
+                  parent="res_sa_setup_menu" action="branch_allowed_server_action"/>
+
+
+
+        <menuitem id="res_company_menu_contacts"
+                    name="الشركات"
+                    action="base.action_res_company_form"
+                    parent="res_sa_setup_menu"
+                    groups="custom_branch_13_inherited.group_access_company_data"
+                    sequence="1"/>
+
+    </data>
+</odoo>

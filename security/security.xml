@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+         <record model="res.groups" id="group_access_company_data">
+            <field name="name">منح صلاحية الوصول لبيانات الشركة من الفوترة</field>
+         </record>
+        <record model="res.groups" id="group_access_branch_data">
+            <field name="name">منح صلاحية الوصول لبيانات الفرع من الفوترة</field>
+         </record>
+
+
+	</data>
+</odoo>
